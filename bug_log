@@ -1,1 +1,16 @@
+Oct 14
 
+Bug: make test fails right away with Error 127. The scripts start with
+#!/usr/bin/env python and Ubuntu 22.04 only has python3.
+
+Fix: Changed the line to python3 in 75 files (commit dfc8039). I removed
+the python symlink and reran make test, and it gets through without it now.
+test_nets.py passes (12 tests, 3 skipped).
+
+Code: branch fix-python3-shebangs on my fork
+https://github.com/rsm0012/mininet/tree/fix-python3-shebangs
+
+Still open: testCPULimits in test_hifi.py fails, and the numbers change
+between runs (about 220% in one run, about 23% in another, against a 10%
+limit). In the userspace test the first three readings are about 10%, so it
+might be how the test reads the last value. I haven't figured it out yet.
