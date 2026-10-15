@@ -1,0 +1,67 @@
+echo "Running tests"
+Running tests
+mininet/test/test_nets.py
+s...ss......
+----------------------------------------------------------------------
+Ran 12 tests in 32.318s
+
+OK (skipped=3)
+mininet/test/test_hifi.py
+sssssF....sssssFs...
+======================================================================
+FAIL: testCPULimits (__main__.testOptionsTopoOVSKernel)
+Verify topology creation with CPU limits set for both schedulers.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rudolf/mininet/mininet/test/test_hifi.py", line 122, in testCPULimits
+    self.assertWithinTolerance( pct/100, CPU_FRACTION,
+  File "/home/rudolf/mininet/mininet/test/test_hifi.py", line 91, in assertWithinTolerance
+    self.assertLessEqual( float( measured ), upperBound, msg=msg )
+AssertionError: 2.7174804159999995 not less than or equal to 0.12 : 
+Testing cpu limited to 10% of cpu per host
+cpu usage percent per host:
+h1: [10.10975425, 10.14523845, 10.02667435, 272.01801215]
+h2: [10.088076425, 10.02967785, 10.06180275, 271.74804159999997]
+Topo = SingleSwitchTopo, 2 hosts
+hopts = cpu: 0.1
+host = CPULimitedHost
+Switch = <class 'mininet.node.OVSSwitch'>
+measured value is out of bounds
+expected value: 0.1
+measured value: 2.7174804159999995
+failure tolerance: 0.8
+upper bound: 0.12
+lower bound: 0.08000000000000002
+
+
+======================================================================
+FAIL: testCPULimits (__main__.testOptionsTopoUserspace)
+Verify topology creation with CPU limits set for both schedulers.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rudolf/mininet/mininet/test/test_hifi.py", line 122, in testCPULimits
+    self.assertWithinTolerance( pct/100, CPU_FRACTION,
+  File "/home/rudolf/mininet/mininet/test/test_hifi.py", line 91, in assertWithinTolerance
+    self.assertLessEqual( float( measured ), upperBound, msg=msg )
+AssertionError: 2.2255630435 not less than or equal to 0.12 : 
+Testing cpu limited to 10% of cpu per host
+cpu usage percent per host:
+h1: [222.500257375, 0.0, 0.0, 0.0]
+h2: [222.55630434999998, 0.0072293999999999995, 0.0, 0.0]
+Topo = SingleSwitchTopo, 2 hosts
+hopts = cpu: 0.1
+host = CPULimitedHost
+Switch = <class 'mininet.node.UserSwitch'>
+measured value is out of bounds
+expected value: 0.1
+measured value: 2.2255630435
+failure tolerance: 0.8
+upper bound: 0.12
+lower bound: 0.08000000000000002
+
+
+----------------------------------------------------------------------
+Ran 20 tests in 104.629s
+
+FAILED (failures=2, skipped=11)
+make: *** [Makefile:42: test] Error 1

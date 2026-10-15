@@ -1,0 +1,836 @@
+From dfc8039b085f2893f39fc9fb88afcb10d5cf0418 Mon Sep 17 00:00:00 2001
+From: rsm0012 <rsanchezmendoza@luc.edu>
+Date: Wed, 14 Oct 2026 20:50:03 -0500
+Subject: [PATCH] Use python3 in shebangs
+
+---
+ bin/mn                                    | 2 +-
+ examples/baresshd.py                      | 2 +-
+ examples/bind.py                          | 2 +-
+ examples/cluster.py                       | 2 +-
+ examples/clusterSanity.py                 | 2 +-
+ examples/clustercli.py                    | 2 +-
+ examples/clusterdemo.py                   | 2 +-
+ examples/clusterperf.py                   | 2 +-
+ examples/consoles.py                      | 2 +-
+ examples/controllers.py                   | 2 +-
+ examples/controllers2.py                  | 2 +-
+ examples/controlnet.py                    | 2 +-
+ examples/cpu.py                           | 2 +-
+ examples/emptynet.py                      | 2 +-
+ examples/hwintf.py                        | 2 +-
+ examples/intfoptions.py                   | 2 +-
+ examples/limit.py                         | 2 +-
+ examples/linearbandwidth.py               | 2 +-
+ examples/linuxrouter.py                   | 2 +-
+ examples/miniedit.py                      | 2 +-
+ examples/mobility.py                      | 2 +-
+ examples/multilink.py                     | 2 +-
+ examples/multiping.py                     | 2 +-
+ examples/multipoll.py                     | 2 +-
+ examples/multitest.py                     | 2 +-
+ examples/nat.py                           | 2 +-
+ examples/natnet.py                        | 2 +-
+ examples/numberedports.py                 | 2 +-
+ examples/popen.py                         | 2 +-
+ examples/popenpoll.py                     | 2 +-
+ examples/scratchnet.py                    | 2 +-
+ examples/scratchnetuser.py                | 2 +-
+ examples/simpleperf.py                    | 2 +-
+ examples/sshd.py                          | 2 +-
+ examples/test/runner.py                   | 2 +-
+ examples/test/test_baresshd.py            | 2 +-
+ examples/test/test_bind.py                | 2 +-
+ examples/test/test_clusterSanity.py       | 2 +-
+ examples/test/test_controllers.py         | 2 +-
+ examples/test/test_controlnet.py          | 2 +-
+ examples/test/test_cpu.py                 | 2 +-
+ examples/test/test_emptynet.py            | 2 +-
+ examples/test/test_hwintf.py              | 2 +-
+ examples/test/test_intfoptions.py         | 2 +-
+ examples/test/test_limit.py               | 2 +-
+ examples/test/test_linearbandwidth.py     | 2 +-
+ examples/test/test_linuxrouter.py         | 2 +-
+ examples/test/test_mobility.py            | 2 +-
+ examples/test/test_multilink.py           | 2 +-
+ examples/test/test_multiping.py           | 2 +-
+ examples/test/test_multipoll.py           | 2 +-
+ examples/test/test_multitest.py           | 2 +-
+ examples/test/test_nat.py                 | 2 +-
+ examples/test/test_natnet.py              | 2 +-
+ examples/test/test_numberedports.py       | 2 +-
+ examples/test/test_popen.py               | 2 +-
+ examples/test/test_scratchnet.py          | 2 +-
+ examples/test/test_simpleperf.py          | 2 +-
+ examples/test/test_sshd.py                | 2 +-
+ examples/test/test_tree1024.py            | 2 +-
+ examples/test/test_treeping64.py          | 2 +-
+ examples/test/test_vlanhost.py            | 2 +-
+ examples/tree1024.py                      | 2 +-
+ examples/treeping64.py                    | 2 +-
+ examples/vlanhost.py                      | 2 +-
+ mininet/test/runner.py                    | 2 +-
+ mininet/test/test_hifi.py                 | 2 +-
+ mininet/test/test_nets.py                 | 2 +-
+ mininet/test/test_ptyleak.py              | 2 +-
+ mininet/test/test_switchdpidassignment.py | 2 +-
+ mininet/test/test_util.py                 | 2 +-
+ mininet/test/test_walkthrough.py          | 2 +-
+ mininet/topo.py                           | 2 +-
+ setup.py                                  | 2 +-
+ util/versioncheck.py                      | 2 +-
+ 75 files changed, 75 insertions(+), 75 deletions(-)
+
+diff --git a/bin/mn b/bin/mn
+index 0893182..95c6a5b 100755
+--- a/bin/mn
++++ b/bin/mn
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Mininet runner
+diff --git a/examples/baresshd.py b/examples/baresshd.py
+index 2249ff7..dbd0ea2 100755
+--- a/examples/baresshd.py
++++ b/examples/baresshd.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "This example doesn't use OpenFlow, but attempts to run sshd in a namespace."
+ 
+diff --git a/examples/bind.py b/examples/bind.py
+index d2ee46f..0e340a0 100755
+--- a/examples/bind.py
++++ b/examples/bind.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ bind.py: Bind mount example
+diff --git a/examples/cluster.py b/examples/cluster.py
+index fce27bb..5a087f0 100755
+--- a/examples/cluster.py
++++ b/examples/cluster.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ cluster.py: prototyping/experimentation for distributed Mininet,
+diff --git a/examples/clusterSanity.py b/examples/clusterSanity.py
+index 71c2b52..96a7440 100755
+--- a/examples/clusterSanity.py
++++ b/examples/clusterSanity.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ '''
+ A sanity check for cluster edition
+diff --git a/examples/clustercli.py b/examples/clustercli.py
+index 34f0956..5cb5a9a 100644
+--- a/examples/clustercli.py
++++ b/examples/clustercli.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "CLI for Mininet Cluster Edition prototype demo"
+ 
+diff --git a/examples/clusterdemo.py b/examples/clusterdemo.py
+index 0e97cc3..1d3452f 100755
+--- a/examples/clusterdemo.py
++++ b/examples/clusterdemo.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "clusterdemo.py: demo of Mininet Cluster Edition prototype"
+ 
+diff --git a/examples/clusterperf.py b/examples/clusterperf.py
+index f18f072..8f38ddb 100755
+--- a/examples/clusterperf.py
++++ b/examples/clusterperf.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "clusterperf.py compare the maximum throughput between SSH and GRE tunnels"
+ 
+diff --git a/examples/consoles.py b/examples/consoles.py
+index b7ede10..5446a55 100755
+--- a/examples/consoles.py
++++ b/examples/consoles.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ consoles.py: bring up a bunch of miniature consoles on a virtual network
+diff --git a/examples/controllers.py b/examples/controllers.py
+index 4cd8866..1fbf9e1 100755
+--- a/examples/controllers.py
++++ b/examples/controllers.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Create a network where different switches are connected to
+diff --git a/examples/controllers2.py b/examples/controllers2.py
+index f20bf3c..a645b16 100755
+--- a/examples/controllers2.py
++++ b/examples/controllers2.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This example creates a multi-controller network from semi-scratch by
+diff --git a/examples/controlnet.py b/examples/controlnet.py
+index bba4f00..e5c404a 100755
+--- a/examples/controlnet.py
++++ b/examples/controlnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ controlnet.py: Mininet with a custom control network
+diff --git a/examples/cpu.py b/examples/cpu.py
+index d90e75a..258d410 100755
+--- a/examples/cpu.py
++++ b/examples/cpu.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ cpu.py: test iperf bandwidth for varying cpu limits
+diff --git a/examples/emptynet.py b/examples/emptynet.py
+index 877e07a..86d4d41 100755
+--- a/examples/emptynet.py
++++ b/examples/emptynet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This example shows how to create an empty Mininet object
+diff --git a/examples/hwintf.py b/examples/hwintf.py
+index 31b8656..cd9ea66 100755
+--- a/examples/hwintf.py
++++ b/examples/hwintf.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This example shows how to add an interface (for example a real
+diff --git a/examples/intfoptions.py b/examples/intfoptions.py
+index 3df590f..36a7023 100755
+--- a/examples/intfoptions.py
++++ b/examples/intfoptions.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ '''
+ example of using various TCIntf options.
+diff --git a/examples/limit.py b/examples/limit.py
+index 5063acc..d8b010e 100755
+--- a/examples/limit.py
++++ b/examples/limit.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ limit.py: example of using link and CPU limits
+diff --git a/examples/linearbandwidth.py b/examples/linearbandwidth.py
+index 437f0d1..74872db 100755
+--- a/examples/linearbandwidth.py
++++ b/examples/linearbandwidth.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test bandwidth (using iperf) on linear networks of varying size,
+diff --git a/examples/linuxrouter.py b/examples/linuxrouter.py
+index 6f1afa1..a97bba3 100755
+--- a/examples/linuxrouter.py
++++ b/examples/linuxrouter.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ linuxrouter.py: Example network with Linux IP router
+diff --git a/examples/miniedit.py b/examples/miniedit.py
+index 54af050..16cc3f3 100755
+--- a/examples/miniedit.py
++++ b/examples/miniedit.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ MiniEdit: a simple network editor for Mininet
+diff --git a/examples/mobility.py b/examples/mobility.py
+index ea8f99e..2d54ca8 100755
+--- a/examples/mobility.py
++++ b/examples/mobility.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Simple example of Mobility with Mininet
+diff --git a/examples/multilink.py b/examples/multilink.py
+index 6f7a5fb..779d39f 100755
+--- a/examples/multilink.py
++++ b/examples/multilink.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This is a simple example that demonstrates multiple links
+diff --git a/examples/multiping.py b/examples/multiping.py
+index 3196206..235d7ed 100755
+--- a/examples/multiping.py
++++ b/examples/multiping.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ multiping.py: monitor multiple sets of hosts using ping
+diff --git a/examples/multipoll.py b/examples/multipoll.py
+index 76ff0a0..b6a31fb 100755
+--- a/examples/multipoll.py
++++ b/examples/multipoll.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Simple example of sending output to multiple files and
+diff --git a/examples/multitest.py b/examples/multitest.py
+index 294a313..a36c91f 100755
+--- a/examples/multitest.py
++++ b/examples/multitest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This example shows how to create a network and run multiple tests.
+diff --git a/examples/nat.py b/examples/nat.py
+index 49506b1..8e45145 100755
+--- a/examples/nat.py
++++ b/examples/nat.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Example to create a Mininet topology and connect it to the internet via NAT
+diff --git a/examples/natnet.py b/examples/natnet.py
+index 12a1698..de8a38c 100755
+--- a/examples/natnet.py
++++ b/examples/natnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ natnet.py: Example network with NATs
+diff --git a/examples/numberedports.py b/examples/numberedports.py
+index dd0259e..f9e2a0c 100755
+--- a/examples/numberedports.py
++++ b/examples/numberedports.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Create a network with 5 hosts, numbered 1-4 and 9.
+diff --git a/examples/popen.py b/examples/popen.py
+index b710408..d51e320 100755
+--- a/examples/popen.py
++++ b/examples/popen.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ This example monitors a number of hosts using host.popen() and
+diff --git a/examples/popenpoll.py b/examples/popenpoll.py
+index 3b5312e..7c7f9c2 100755
+--- a/examples/popenpoll.py
++++ b/examples/popenpoll.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "Monitor multiple hosts using popen()/pmonitor()"
+ 
+diff --git a/examples/scratchnet.py b/examples/scratchnet.py
+index ad43a98..ef0ca5f 100755
+--- a/examples/scratchnet.py
++++ b/examples/scratchnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Build a simple network from scratch, using mininet primitives.
+diff --git a/examples/scratchnetuser.py b/examples/scratchnetuser.py
+index 99f5bf0..d9b73b5 100755
+--- a/examples/scratchnetuser.py
++++ b/examples/scratchnetuser.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Build a simple network from scratch, using mininet primitives.
+diff --git a/examples/simpleperf.py b/examples/simpleperf.py
+index a117945..e0be666 100755
+--- a/examples/simpleperf.py
++++ b/examples/simpleperf.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Simple example of setting network and CPU parameters
+diff --git a/examples/sshd.py b/examples/sshd.py
+index 80fe0f8..b66598f 100755
+--- a/examples/sshd.py
++++ b/examples/sshd.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Create a network and start sshd(8) on each host.
+diff --git a/examples/test/runner.py b/examples/test/runner.py
+index fb9534e..c1203c4 100755
+--- a/examples/test/runner.py
++++ b/examples/test/runner.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Run all mininet.examples tests
+diff --git a/examples/test/test_baresshd.py b/examples/test/test_baresshd.py
+index 251b75d..43387b1 100755
+--- a/examples/test/test_baresshd.py
++++ b/examples/test/test_baresshd.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Tests for baresshd.py
+diff --git a/examples/test/test_bind.py b/examples/test/test_bind.py
+index e423e39..2d9a000 100755
+--- a/examples/test/test_bind.py
++++ b/examples/test/test_bind.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Tests for bind.py
+diff --git a/examples/test/test_clusterSanity.py b/examples/test/test_clusterSanity.py
+index e91c885..57feeb1 100755
+--- a/examples/test/test_clusterSanity.py
++++ b/examples/test/test_clusterSanity.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ '''
+ A simple sanity check test for cluster edition
+diff --git a/examples/test/test_controllers.py b/examples/test/test_controllers.py
+index abc79eb..8cadbba 100755
+--- a/examples/test/test_controllers.py
++++ b/examples/test/test_controllers.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Tests for controllers.py and controllers2.py
+diff --git a/examples/test/test_controlnet.py b/examples/test/test_controlnet.py
+index 7e7ce9a..228b484 100755
+--- a/examples/test/test_controlnet.py
++++ b/examples/test/test_controlnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for controlnet.py
+diff --git a/examples/test/test_cpu.py b/examples/test/test_cpu.py
+index 8b36c6e..93b3641 100755
+--- a/examples/test/test_cpu.py
++++ b/examples/test/test_cpu.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for cpu.py
+diff --git a/examples/test/test_emptynet.py b/examples/test/test_emptynet.py
+index aead619..350ad83 100755
+--- a/examples/test/test_emptynet.py
++++ b/examples/test/test_emptynet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for emptynet.py
+diff --git a/examples/test/test_hwintf.py b/examples/test/test_hwintf.py
+index e242ca3..776ab12 100755
+--- a/examples/test/test_hwintf.py
++++ b/examples/test/test_hwintf.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for hwintf.py
+diff --git a/examples/test/test_intfoptions.py b/examples/test/test_intfoptions.py
+index 531925e..7a6b47f 100755
+--- a/examples/test/test_intfoptions.py
++++ b/examples/test/test_intfoptions.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for intfOptions.py
+diff --git a/examples/test/test_limit.py b/examples/test/test_limit.py
+index 47ceaa1..0962771 100755
+--- a/examples/test/test_limit.py
++++ b/examples/test/test_limit.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for limit.py
+diff --git a/examples/test/test_linearbandwidth.py b/examples/test/test_linearbandwidth.py
+index 9e876bc..685fdc3 100755
+--- a/examples/test/test_linearbandwidth.py
++++ b/examples/test/test_linearbandwidth.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for linearbandwidth.py
+diff --git a/examples/test/test_linuxrouter.py b/examples/test/test_linuxrouter.py
+index f9cf648..dbcc40e 100755
+--- a/examples/test/test_linuxrouter.py
++++ b/examples/test/test_linuxrouter.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for linuxrouter.py
+diff --git a/examples/test/test_mobility.py b/examples/test/test_mobility.py
+index 6eb28ee..3e0a499 100755
+--- a/examples/test/test_mobility.py
++++ b/examples/test/test_mobility.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for mobility.py
+diff --git a/examples/test/test_multilink.py b/examples/test/test_multilink.py
+index 0925548..52c8e9d 100755
+--- a/examples/test/test_multilink.py
++++ b/examples/test/test_multilink.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ '''
+ Test for multiple links between nodes
+diff --git a/examples/test/test_multiping.py b/examples/test/test_multiping.py
+index 2519121..d6279f5 100755
+--- a/examples/test/test_multiping.py
++++ b/examples/test/test_multiping.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for multiping.py
+diff --git a/examples/test/test_multipoll.py b/examples/test/test_multipoll.py
+index 8815033..f27c689 100755
+--- a/examples/test/test_multipoll.py
++++ b/examples/test/test_multipoll.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for multipoll.py
+diff --git a/examples/test/test_multitest.py b/examples/test/test_multitest.py
+index 4352b8e..e39b355 100755
+--- a/examples/test/test_multitest.py
++++ b/examples/test/test_multitest.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for multitest.py
+diff --git a/examples/test/test_nat.py b/examples/test/test_nat.py
+index 865615f..b8526a8 100755
+--- a/examples/test/test_nat.py
++++ b/examples/test/test_nat.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for nat.py
+diff --git a/examples/test/test_natnet.py b/examples/test/test_natnet.py
+index 4b9e099..e487b65 100755
+--- a/examples/test/test_natnet.py
++++ b/examples/test/test_natnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for natnet.py
+diff --git a/examples/test/test_numberedports.py b/examples/test/test_numberedports.py
+index ea7d61e..104fe38 100755
+--- a/examples/test/test_numberedports.py
++++ b/examples/test/test_numberedports.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for numberedports.py
+diff --git a/examples/test/test_popen.py b/examples/test/test_popen.py
+index f41d531..5b40a79 100755
+--- a/examples/test/test_popen.py
++++ b/examples/test/test_popen.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for popen.py and popenpoll.py
+diff --git a/examples/test/test_scratchnet.py b/examples/test/test_scratchnet.py
+index 7facc0f..ee086a7 100755
+--- a/examples/test/test_scratchnet.py
++++ b/examples/test/test_scratchnet.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for scratchnet.py
+diff --git a/examples/test/test_simpleperf.py b/examples/test/test_simpleperf.py
+index b0506d9..514e26a 100755
+--- a/examples/test/test_simpleperf.py
++++ b/examples/test/test_simpleperf.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for simpleperf.py
+diff --git a/examples/test/test_sshd.py b/examples/test/test_sshd.py
+index e012a29..9201a96 100755
+--- a/examples/test/test_sshd.py
++++ b/examples/test/test_sshd.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for sshd.py
+diff --git a/examples/test/test_tree1024.py b/examples/test/test_tree1024.py
+index 06f8e49..ab4b798 100755
+--- a/examples/test/test_tree1024.py
++++ b/examples/test/test_tree1024.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for tree1024.py
+diff --git a/examples/test/test_treeping64.py b/examples/test/test_treeping64.py
+index 8c346cd..b6807fa 100755
+--- a/examples/test/test_treeping64.py
++++ b/examples/test/test_treeping64.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for treeping64.py
+diff --git a/examples/test/test_vlanhost.py b/examples/test/test_vlanhost.py
+index 6781cce..6924ab5 100755
+--- a/examples/test/test_vlanhost.py
++++ b/examples/test/test_vlanhost.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Test for vlanhost.py
+diff --git a/examples/tree1024.py b/examples/tree1024.py
+index 35a796c..5d40682 100755
+--- a/examples/tree1024.py
++++ b/examples/tree1024.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Create a 1024-host network, and run the CLI on it.
+diff --git a/examples/treeping64.py b/examples/treeping64.py
+index 770e389..de918ea 100755
+--- a/examples/treeping64.py
++++ b/examples/treeping64.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "Create a 64-node tree network, and test connectivity using ping."
+ 
+diff --git a/examples/vlanhost.py b/examples/vlanhost.py
+index d15d2d6..72376df 100755
+--- a/examples/vlanhost.py
++++ b/examples/vlanhost.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ """
+ vlanhost.py: Host subclass that uses a VLAN tag for the default interface.
+ 
+diff --git a/mininet/test/runner.py b/mininet/test/runner.py
+index 4540599..5abc7c5 100755
+--- a/mininet/test/runner.py
++++ b/mininet/test/runner.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Run all mininet core tests
+diff --git a/mininet/test/test_hifi.py b/mininet/test/test_hifi.py
+index e1cf980..ab6d1e8 100755
+--- a/mininet/test/test_hifi.py
++++ b/mininet/test/test_hifi.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """Package: mininet
+    Test creation and pings for topologies with link and/or CPU options."""
+diff --git a/mininet/test/test_nets.py b/mininet/test/test_nets.py
+index 98048ec..f5a4ed4 100755
+--- a/mininet/test/test_nets.py
++++ b/mininet/test/test_nets.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """Package: mininet
+    Test creation and all-pairs ping for each included mininet topo type."""
+diff --git a/mininet/test/test_ptyleak.py b/mininet/test/test_ptyleak.py
+index 813be76..4bf0e84 100755
+--- a/mininet/test/test_ptyleak.py
++++ b/mininet/test/test_ptyleak.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Regression test for pty leak in Node()
+diff --git a/mininet/test/test_switchdpidassignment.py b/mininet/test/test_switchdpidassignment.py
+index 83a2e45..faf43be 100755
+--- a/mininet/test/test_switchdpidassignment.py
++++ b/mininet/test/test_switchdpidassignment.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """Package: mininet
+    Regression tests for switch dpid assignment."""
+diff --git a/mininet/test/test_util.py b/mininet/test/test_util.py
+index 5e480b7..8ba8167 100755
+--- a/mininet/test/test_util.py
++++ b/mininet/test/test_util.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """Package: mininet
+    Test functions defined in mininet.util."""
+diff --git a/mininet/test/test_walkthrough.py b/mininet/test/test_walkthrough.py
+index 39be95f..2df724f 100755
+--- a/mininet/test/test_walkthrough.py
++++ b/mininet/test/test_walkthrough.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ """
+ Tests for the Mininet Walkthrough
+diff --git a/mininet/topo.py b/mininet/topo.py
+index f79fe23..49df6b6 100644
+--- a/mininet/topo.py
++++ b/mininet/topo.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ """@package topo
+ 
+ Network topology creation.
+diff --git a/setup.py b/setup.py
+index 21aa25d..7c9d4ad 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ "Setuptools params"
+ 
+diff --git a/util/versioncheck.py b/util/versioncheck.py
+index a9d6cfc..7238f37 100755
+--- a/util/versioncheck.py
++++ b/util/versioncheck.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from subprocess import check_output as co
+ from sys import exit, version_info
+-- 
+2.34.1
+
