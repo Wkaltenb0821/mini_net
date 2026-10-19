@@ -1,15 +1,28 @@
-#1. Install UTM as a virtual box 
-#2. Download the Ubuntu server matching your devices chip 
+#1. 
+Install UTM as a virtual box 
+#2.
+Download the Ubuntu server matching your devices chip 
+#3. 
 For Apple M1 chip devices download,: 
-    mininet-2.3.0-210211-ubuntu-20.04.1-legacy-server-amd64-ovf.zip 
-#3. Create a New Virtual Machine 
+    mininet-2.3.0-210211-ubuntu-20.04.1-legacy-server-amd64-ovf.zip from github.com/mininet/mininet/releases
+    Unzip to access .vmdk file 
+
+#4. 
+Create a New Virtual Machine 
    Select emulate, then select other
+   Skip the ISO Boot  
 
-
-
-
-
-
-#4. In UTM setup ensure
+#5. 
+In UTM setup for Apple M1 devices ensure 
     Architecture is x86_64 
-    Memory is 2GB 
+    System Standard PC (Q35)
+    Memory 2048
+    CPU cores 2 
+
+Edit Settings After Creating 
+    New drive -> set interface to IDE 
+    UEFI Boot should not be checked 
+    Leave display as default 
+
+#6.
+Name Mininet + Create Password 
