@@ -1,4 +1,4 @@
-Oct 14
+Date found: October 14, 2026
 
 Bug: make test fails right away with Error 127. The scripts start with
 #!/usr/bin/env python and Ubuntu 22.04 only has python3.
@@ -14,3 +14,18 @@ Still open: testCPULimits in test_hifi.py fails, and the numbers change
 between runs (about 220% in one run, about 23% in another, against a 10%
 limit). In the userspace test the first three readings are about 10%, so it
 might be how the test reads the last value. I haven't figured it out yet.
+
+
+Date found: October 28, 2026
+
+Bug: Python 3 Compatibility in Walkthrough HTTP Test
+
+Location: mininet/test/test_walkthrough.py, function testSimpleHTTP()
+
+Problem: The test attempted to use the python command, which was unavailable in the VM, which caused a FileNotFoundError and prevented the HTTP test from running.
+
+Fix: Removed the Python version check and changed the HTTP server command to use python3 with the http.server module.
+
+Verification: The testSimpleHTTP test passed and the HTTP server started successfully, and a request from another host returned 200 OK.
+
+Status: Fixed locally and tested on the VM, will commit soon.
