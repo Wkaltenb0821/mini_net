@@ -26,8 +26,8 @@ with sudo mn --topo single,3 to enable 3 hosts. I ended without formally
 closing out session with CTR + Z. I started over and recrived with error 
 meaning there was still leftovers from previous session. 
 
-Code:  Location: mininet/util.py, makeIntfPair() (called from mininet/link.py
--> sudo mn --topo linear,3) sudo mn --topo linear,3
+Code:  Location: mininet/util.py, makeIntfPair() called from (mininet/link.py
+-> sudo mn --topo linear,3) 
 
 Fix: Changing topography will still work, even in python3 but you have to ensure 
 use of sudo mn -c. The meaning of the error is that firstly mininet is not replying 
