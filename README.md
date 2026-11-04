@@ -1,6 +1,6 @@
 Mininet project for COMP 312
 
-GENERAL 
+
 This project was created around mininet. Our goal was to experiment, find bugs, 
 and in the end have a deeper understanding of debugging and how it works. In 
 the first stages of this project we got mini-net running on both windows and
