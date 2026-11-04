@@ -16,6 +16,25 @@ limit). In the userspace test the first three readings are about 10%, so it
 might be how the test reads the last value. I haven't figured it out yet.
 
 
+Date found: October 14, 2026
+
+Bug: Topology in mininet fails to build when adding or creating a new one. 
+"RTNETLINK answers: File exists"
+
+Verification: To confimrm the existence of this bug I made a topography change 
+with sudo mn --topo single,3 to enable 3 hosts. I ended without formally 
+closing out session with CTR + Z. I started over and recrived with error 
+meaning there was still leftovers from previous session. 
+
+Code:  Location: mininet/util.py, makeIntfPair() (called from mininet/link.py
+-> sudo mn --topo linear,3) sudo mn --topo linear,3
+
+Fix: Changing topography will still work, even in python3 but you have to ensure 
+use of sudo mn -c. The meaning of the error is that firstly mininet is not replying 
+to command linux kernal is and there's a previous session where name already exists, 
+so there's refusal of my command request. 
+
+
 Date found: October 28, 2026
 
 Bug: Python 3 Compatibility in Walkthrough HTTP Test
@@ -29,3 +48,16 @@ Fix: Removed the Python version check and changed the HTTP server command to use
 Verification: The testSimpleHTTP test passed and the HTTP server started successfully, and a request from another host returned 200 OK.
 
 Status: Fixed locally and tested on the VM, will commit soon.
+
+
+
+
+
+
+
+
+
+
+
+
+
