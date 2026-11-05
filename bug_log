@@ -49,6 +49,29 @@ Verification: The testSimpleHTTP test passed and the HTTP server started success
 
 Status: Fixed locally and tested on the VM, will commit soon.
 
+Date found: November 4
+
+Bug: testSimpleHTTP in test_walkthrough.py fails with FileNotFoundError: 'python'.
+
+Location: mininet/test/test_walkthrough.py, testSimpleHTTP()
+
+Problem: The test runs python,  to pick a web server module, and
+Ubuntu 22.04 has no python command, only python3. It's the same problem as
+the shebang fix, but written inside the code, so the shebang change didn't
+cover it.
+
+Fix: Removed the version check and used python3 -m http.server directly.
+
+Verification: Reran only that test, before it errored out, after it passes:
+the server starts, wget from h2 gets 200 OK from h1, and the test says OK
+in about 6 seconds.
+
+Code: commit bafcd48, branch fix-walkthrough-python3 on my fork
+https://github.com/rsm0012/mininet/tree/fix-walkthrough-python3
+Files: https://github.com/Wkaltenb0821/mini_net/tree/main/python3-walkthrough-test
+
+Status: Fixed and committed. This version only works with Python 3, the
+original also handled Python 2.
 
 
 
