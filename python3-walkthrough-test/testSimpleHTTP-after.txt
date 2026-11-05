@@ -1,0 +1,81 @@
+testSimpleHTTP (__main__.testWalkthrough)
+Start an HTTP server on h1 and wget from h2 ... *** Creating network
+*** Adding controller
+*** Adding hosts:
+h1 h2 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) (h2, s1) 
+*** Configuring hosts
+h1 h2 
+*** Starting controller
+c0 
+*** Starting 1 switches
+s1 ...
+*** Waiting for switches to connect
+s1 
+*** Starting CLI:
+mininet> h1 python3 -m http.server 80 >& /dev/null &
+h1 python3 -m http.server 80 >& /dev/null &
+mininet> px from mininet.util import waitListening;waitListening(h1, port=80, timeout=30)
+px from mininet.util import waitListening;waitListening(h1, port=80, timeout=30)
+mininet>  h2 wget -O - h1
+ h2 wget -O - h1
+--2026-11-04 21:54:15--  http://10.0.0.1/
+Connecting to 10.0.0.1:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1273 (1.2K) [text/html]
+Saving to: ‘STDOUT’
+
+-                     0%[                    ]       0  --.-KB/s               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directory listing for /</title>
+</head>
+<body>
+<h1>Directory listing for /</h1>
+<hr>
+<ul>
+<li><a href=".git/">.git/</a></li>
+<li><a href=".gitattributes">.gitattributes</a></li>
+<li><a href=".github/">.github/</a></li>
+<li><a href=".gitignore">.gitignore</a></li>
+<li><a href=".pylint">.pylint</a></li>
+<li><a href="bin/">bin/</a></li>
+<li><a href="build/">build/</a></li>
+<li><a href="CONTRIBUTORS">CONTRIBUTORS</a></li>
+<li><a href="custom/">custom/</a></li>
+<li><a href="debian/">debian/</a></li>
+<li><a href="doc/">doc/</a></li>
+<li><a href="examples/">examples/</a></li>
+<li><a href="INSTALL">INSTALL</a></li>
+<li><a href="LICENSE">LICENSE</a></li>
+<li><a href="Makefile">Makefile</a></li>
+<li><a href="mininet/">mininet/</a></li>
+<li><a href="mininet.egg-info/">mininet.egg-info/</a></li>
+<li><a href="mn.1">mn.1</a></li>
+<li><a href="mnexec">mnexec</a></li>
+<li><a href="mnexec.1">mnexec.1</a></li>
+<li><a href="mnexec.c">mnexec.c</a></li>
+<li><a href="README.md">README.md</a></li>
+<li><a href="setup.py">setup.py</a></li>
+<li><a href="util/">util/</a></li>
+</ul>
+<hr>
+</body>
+</html>
+-                   100%[===================>]   1.24K  --.-KB/s    in 0s      
+
+2026-11-04 21:54:15 (357 MB/s) - written to stdout [1273/1273]
+
+mininet> h1 kill %python
+h1 kill %python
+mininet> exit
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.000s
+
+OK

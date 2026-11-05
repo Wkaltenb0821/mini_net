@@ -1,0 +1,71 @@
+echo "Running slower tests (walkthrough, examples)"
+Running slower tests (walkthrough, examples)
+mininet/test/test_walkthrough.py -v
+testBasic (__main__.testWalkthrough)
+Test basic CLI commands (help, nodes, net, dump) ... ok
+testBenchmark (__main__.testWalkthrough)
+Run benchmark and verify that it takes less than 2 seconds ... ok
+testConnectivity (__main__.testWalkthrough)
+Test ping and pingall ... ok
+testCustomTopo (__main__.testWalkthrough)
+Start Mininet using a custom topo, then run pingall ... ok
+testHelp (__main__.testWalkthrough)
+Check the usage message ... ok
+testHostCommands (__main__.testWalkthrough)
+Test ifconfig and ps on h1 and s1 ... ok
+testLink (__main__.testWalkthrough)
+Test link CLI command using ping ... ok
+testLinkChange (__main__.testWalkthrough)
+Test TCLink bw and delay ... FAIL
+testOwnNamespace (__main__.testWalkthrough)
+Test running user switch in its own namespace ... ok
+testPythonInterpreter (__main__.testWalkthrough)
+Test py and px by checking IP for h1 and adding h3 ... ok
+testRegressionRun (__main__.testWalkthrough)
+Test pingpair (0% drop) and iperf (bw > 0) regression tests ... ok
+testRemoteController (__main__.testWalkthrough)
+Test Mininet using Pox controller ... ok
+testSimpleHTTP (__main__.testWalkthrough)
+Start an HTTP server on h1 and wget from h2 ... ERROR
+testStaticMAC (__main__.testWalkthrough)
+Verify that MACs are set to easy to read numbers ... ok
+testSwitches (__main__.testWalkthrough)
+Run iperf test using user and ovsk switches ... ok
+testTopoChange (__main__.testWalkthrough)
+Test pingall on single,3 and linear,4 topos ... ok
+testVerbosity (__main__.testWalkthrough)
+Test debug and output verbosity ... ok
+testWireshark (__main__.testWalkthrough)
+Use tshark to test the of dissector ... ok
+
+======================================================================
+ERROR: testSimpleHTTP (__main__.testWalkthrough)
+Start an HTTP server on h1 and wget from h2
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rudolf/mininet/mininet/test/test_walkthrough.py", line 168, in testSimpleHTTP
+    if 'Python 2' in quietRun( 'python --version' ):
+  File "/usr/local/lib/python3.10/dist-packages/mininet/util.py", line 214, in quietRun
+    return errRun( cmd, stderr=STDOUT, **kwargs ).out
+  File "/usr/local/lib/python3.10/dist-packages/mininet/util.py", line 156, in errRun
+    popen = Popen( cmd, stdout=PIPE, stderr=stderr, shell=shell )
+  File "/usr/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'python'
+
+======================================================================
+FAIL: testLinkChange (__main__.testWalkthrough)
+Test TCLink bw and delay
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/rudolf/mininet/mininet/test/test_walkthrough.py", line 235, in testLinkChange
+    self.assertTrue( bw > 9.0, 'Bandwidth %.2f <= 9 Mb/s' % bw )
+AssertionError: False is not true : Bandwidth 7.80 <= 9 Mb/s
+
+----------------------------------------------------------------------
+Ran 18 tests in 100.228s
+
+FAILED (failures=1, errors=1)
+make: *** [Makefile:46: slowtest] Error 1
