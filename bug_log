@@ -49,7 +49,7 @@ Verification: The testSimpleHTTP test passed and the HTTP server started success
 
 Status: Fixed locally and tested on the VM, will commit soon.
 
-Date found: November 4
+Date found: November 4, 2026
 
 Bug: testSimpleHTTP in test_walkthrough.py fails with FileNotFoundError: 'python'.
 
@@ -74,7 +74,20 @@ Status: Fixed and committed. This version only works with Python 3, the
 original also handled Python 2.
 
 
+Date found: November 18th, 2026
 
+Bug: addHost() function fails to assign specific IP addresses to a host interface.
+
+Problem: Using addHost(), for example,
+  `py net.addHost('h3', ip='10.0.1.10/24', defaultRoute-'via 10.0.1.1')`,
+  fails to actually assign the desired IP address. Running `h3 ip addr` shows that
+  desired IP nowhere within the return.
+
+Fix: Set ip manually with setIP() (ex. py h3.setIP('10.0.1.10/24'))
+
+Verification: Run `h3 ip addr` after using setIP() -> inet's line should display the IP
+
+Status: Fixed
 
 
 
